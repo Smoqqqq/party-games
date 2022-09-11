@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0px;overflow: hidden">
+    <canvas id="canvas" style="border: 1px solid #EEE; display: block"></canvas>
+
+    <img src="pipe_down.png" alt="" id="pipe-down" style="display: none">
+    <img src="pipe_up.png" alt="" id="pipe-up" style="display: none">
+
+    <img src="fancy_bird.png" alt="" id="flappy" style="display: none">
+    <img src="fancy_bird_jumping.png" alt="" id="flappy-jumping" style="display: none">
+
+    <script src="flappy.js"></script>
+    <script src="wall.js"></script>
+    <script src="main.js" defer></script>
+
+    <style>
+        #prompt{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 2vh 2vw;
+            box-shadow: 0px 0px 15px #EEE;
+        }
+        #prompt p{
+            font-size: 2vw;
+            color: black;
+            margin-bottom: 5vh;
+        }
+        .btn{
+            padding: 5vh 5vw;
+            background: blue;
+            font-size: 3vw;
+            text-transform: uppercase;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
