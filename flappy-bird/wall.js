@@ -58,5 +58,8 @@ function animateWalls() {
             width: 50
         });
     }
-    if (walls[0].top.x < - walls[0].width) walls.splice(0, 1);
+    if (walls[0].top.x < - walls[0].width) {
+        walls.splice(0, 1);
+        score ++;
+    }
 }

@@ -1,6 +1,8 @@
 const canvas = document.getElementById("canvas");
 let c = canvas.getContext("2d");
 
+let score = 0;
+
 canvas.height = innerHeight;
 canvas.width = innerWidth;
 
@@ -29,6 +31,7 @@ function endGame() {
 }
 
 function restartGame() {
+    score = 0;
     canvas.classList.remove("game-end");
     canvas.style.transform = "";
     initWalls();
@@ -49,6 +52,8 @@ function setGameTick(tick) {
         animateWalls();
         drawWalls();
         drawFlappy();
+        c.font = '18px serif';
+        c.fillText("Score: " + score, 30, 30);
     }, tick)
     return gameTick;
 }
